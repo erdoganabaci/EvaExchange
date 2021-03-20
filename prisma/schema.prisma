@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Buyer {
+  id                Int  @id @default(autoincrement())
+  buyerCoin         Int?
+  buyerMoney        Int?
+  buyerDepositMoney Int?
+  buyerDesiredCoin  Int?
+  // buyerDepositCoinPrice Int?
+  // Pending           Pending[]
+}
+
+model Seller {
+  id                     Int  @id @default(autoincrement())
+  sellerCoin             Int?
+  sellerMoney            Int?
+  sellerDepositMoney     Int?
+  sellerDepositCoin      Int?
+  sellerDepositCoinPrice Int?
+  // Pending                Pending[]
+}
+
+model coinRate {
+  id       Int  @id @default(autoincrement())
+  coinRate Int?
+}
+
+// model Pending {
+//   id       Int     @id @default(autoincrement())
+//   // totalMoney Int
+//   seller   Seller? @relation(fields: [sellerId], references: [id])
+//   sellerId Int?
+//   buyer    Buyer?  @relation(fields: [buyerId], references: [id])
+//   buyerId  Int?
+// }
