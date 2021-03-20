@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "bulk-db":"node src/db-init.js",
-    "studio" : "npx prisma studio",
+    "bulk-db": "node src/db-init.js",
+    "studio": "npx prisma studio",
     "migrate": "prisma migrate dev --preview-feature"
   },
   "dependencies": {
