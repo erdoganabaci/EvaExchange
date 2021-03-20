@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "17956d28-62a0-4d56-84ba-c060627eaf81",
+		"name": "evaTrade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Buyers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/buyers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buyers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Sellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/sellers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sellerCoin\" : 13,\n    \"sellerMoney\": 130,\n    \"sellerDepositCoin\":3,\n    \"sellerDepositCoinPrice\":25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/seller/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seller",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyer/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"buyerCoin\" : 13,\n    \"buyerMoney\": 130,\n    \"buyerDepositMoney\":3,\n    \"buyerDesiredCoin\":25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/buyer/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buyer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Coin with id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/sell/6/coin/10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sell",
+						"6",
+						"coin",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy coin with units and seller id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/buy/1/coin/10/seller/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buy",
+						"1",
+						"coin",
+						"10",
+						"seller",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
